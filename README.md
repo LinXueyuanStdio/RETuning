@@ -7,10 +7,10 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch_1.8+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 ![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)
 
-[![arXiv 2510.21604](https://img.shields.io/badge/arXiv-2510.21604-b31b1b&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.21604)
-[![Dataset RETuning](https://img.shields.io/badge/Dataset-RETuning-FFD21E&logo=huggingface&logoColor=orange)](https://huggingface.co/datasets/linxy/RETuning)
-[![Collection RETuning](https://img.shields.io/badge/Collection-RETuning-FFD21E&logo=huggingface&logoColor=orange)](https://huggingface.co/collections/linxy/retuning)
-[![Weights](https://img.shields.io/badge/Weights-14B__SFT-FFD21E&logo=huggingface&logoColor=orange)](https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT)
+[![arXiv 2510.21604](https://img.shields.io/badge/arXiv-2510.21604-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.21604)
+[![Dataset RETuning](https://img.shields.io/badge/Dataset-RETuning-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/datasets/linxy/RETuning)
+[![Collection RETuning](https://img.shields.io/badge/Collection-RETuning-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/collections/linxy/retuning)
+[![Weights](https://img.shields.io/badge/Weights-14B__SFT-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT)
 
 </div>
 
