@@ -30,7 +30,7 @@
 
 ![findings2](./assets/difficulty_distribution.png)
 
-**LLMs benefit from inference-time scaling in stock movement prediction.**
+**RETuning enables LLMs to benefit from inference-time scaling in stock movement prediction.**
 
 ![findings](./assets/scaling_from_RETuning.png)
 
