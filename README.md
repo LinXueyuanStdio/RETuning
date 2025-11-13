@@ -28,12 +28,15 @@
 
 **Up/Down movements are much more difficult for LLMs to predict.**
 
-![findings2](./assets/difficulty_distribution.png)
+![findings](./assets/difficulty_distribution.png)
 
 **RETuning enables LLMs to benefit from inference-time scaling in stock movement prediction.**
 
 ![findings](./assets/scaling_from_RETuning.png)
 
+**Most LLMs are bounded by random guessing in stock movement prediction.**
+
+![findings](./assets/baselines_wo_CoT.png)
 
 ## 🚀 Quick Start
 
@@ -69,6 +72,10 @@ bash pipeline/evaluation/evaluate_32b.sh  # for DeepSeek_R1_32B
 ## 📊 Dataset
 
 ![dataset](./assets/dataset.png)
+
+Prompt length distribution:
+
+![prompt_length](./assets/prompt_length_distribution.png)
 
 ## 🤝 Citation
 
