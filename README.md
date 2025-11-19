@@ -18,7 +18,8 @@
 
 ## 🔔 News
 
-- The training dataset for RL (middle & hard difficulty), as well as full 200k Fin-2024, will be released after peer review and publication. ⭐ Star the repo & Stay tuned!
+- We are planning to release full Fin-2025. ⭐ Star the repo & Stay tuned!
+- **`Nov. 23, 2025`: The training dataset for RL (middle difficulty), as well as full 200k Fin-2024, has been released on 🤗 HuggingFace: [RETuning](https://huggingface.co/datasets/linxy/RETuning).**
 - **`Nov. 13, 2025`: Evaluation and SFT dataset is released on 🤗 HuggingFace: [RETuning](https://huggingface.co/datasets/linxy/RETuning).**
 - **`Nov. 11, 2025`: We released the model weights on 🤗 HuggingFace: [DeepSeek_R1_14B_SFT](https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT), [DeepSeek_R1_14B_SFT_GRPO](https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT_GRPO), [DeepSeek_R1_32B_SFT](https://huggingface.co/linxy/RETuning-DeepSeek_R1_32B_SFT), [DeepSeek_R1_32B_SFT_GRPO](https://huggingface.co/linxy/RETuning-DeepSeek_R1_32B_SFT_GRPO).**
 - **`Oct. 24, 2025`: We upload the preprint to [arXiv](https://arxiv.org/abs/2510.21604).**
