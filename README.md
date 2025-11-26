@@ -1,18 +1,87 @@
 <div id="top"></div>
 
-<div align="center">
-
-# RETuning: Upgrading Inference-Time Scaling for Stock Movement Prediction with Large Language Models #
-
-[![PyTorch](https://img.shields.io/badge/PyTorch_1.8+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
-![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)
-
-[![arXiv 2510.21604](https://img.shields.io/badge/arXiv-2510.21604-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.21604)
-[![Dataset RETuning](https://img.shields.io/badge/Dataset-RETuning-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/datasets/linxy/RETuning)
-[![Collection RETuning](https://img.shields.io/badge/Collection-RETuning-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/collections/linxy/retuning)
-[![Weights](https://img.shields.io/badge/Weights-14B__SFT-FFD21E?logo=huggingface&logoColor=orange)](https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT)
-
-</div>
+<p align="center">
+  <h1 align="center">
+    <img src="assets/logo.png" alt="RETuning logo" height="40" style="position:relative; top:6px;">
+    <img src="assets/IDEAResearch.png" alt="RETuning logo" height="40" style="position:relative; top:6px;">
+    <img src="assets/hkust-gz-logo.svg" alt="RETuning logo" height="40" style="position:relative; top:6px;">
+  </h1>
+  <h1 align="center">
+    RETuning: Upgrading Inference-Time Scaling for Stock Movement Prediction with Large Language Models
+  </h1>
+  <p align="center">
+    <!-- 徽章区域 -->
+    <a href="https://arxiv.org/abs/2510.21604" target="_blank">
+      <img src="https://img.shields.io/badge/arXiv-2510.21604-b31b1b?logo=arxiv&logoColor=white" alt="arXiv">
+    </a>
+    <a href="https://huggingface.co/datasets/linxy/RETuning" target="_blank">
+      <img src="https://img.shields.io/badge/Dataset-RETuning-FFD21E?logo=huggingface&logoColor=orange" alt="Dataset">
+    </a>
+    <a href="https://huggingface.co/collections/linxy/retuning" target="_blank">
+      <img src="https://img.shields.io/badge/Collection-RETuning-FFD21E?logo=huggingface&logoColor=orange" alt="Collection">
+    </a>
+    <a href="https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT" target="_blank">
+      <img src="https://img.shields.io/badge/Weights-14B__SFT-FFD21E?logo=huggingface&logoColor=orange" alt="Weights">
+    </a>
+    <a href="./LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray" alt="MIT License">
+    </a>
+  </p>
+  <p align="center">
+    <span class="author-block">
+      Xueyuan Lin<sup>1,2,3,*</sup>,
+    </span>
+    <span class="author-block">
+      Cehao Yang<sup>1,2,*</sup>,
+    </span>
+    <span class="author-block">
+      Ye Ma<sup>3</sup>,
+    </span>
+    <span class="author-block">
+      Ming Li<sup>3</sup>,
+    </span>
+    <span class="author-block">
+      Rongjunchen Zhang<sup>3</sup>,
+    </span>
+    <span class="author-block">
+      Yang Ni<sup>1</sup>,
+    </span>
+    <span class="author-block">
+      Xiaojun Wu<sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+      Chengjin Xu<sup>2,4</sup>,
+    </span>
+    <span class="author-block">
+      Jian Guo<sup>2,†</sup>,
+    </span>
+    <span class="author-block">
+      Hui Xiong<sup>1,†</sup>
+    </span>
+  </p>
+  <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+    <span class="author-block">
+      <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou),
+      <sup>2</sup>IDEA Research,
+      <sup>3</sup>Hithink RoyalFlush Information Network Co., Ltd,
+      <sup>4</sup>DataArc Tech Ltd
+    </span>
+    <br>
+    <span class="author-block">
+      <sup>*</sup>Equal contribution,
+      <sup>†</sup>Corresponding author
+    </span>
+  </div>
+</p>
+<p align="center">
+  📖<a href="https://arxiv.org/abs/2510.21604">Paper</a> |
+  📊<a href="https://huggingface.co/datasets/linxy/RETuning">Dataset</a> |
+  📦<a href="https://huggingface.co/collections/linxy/retuning">Collection</a> |
+  🤖<a href="https://huggingface.co/linxy/RETuning-DeepSeek_R1_14B_SFT">Weights</a>
+   | 🐙<a href="https://github.com/LinXueyuanStdio/RETuning">GitHub</a>
+</p>
+<div align="center"></div>
+<p align="center">
 
 ![method](./assets/method.png)
 
