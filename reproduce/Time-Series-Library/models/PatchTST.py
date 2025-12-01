@@ -5,7 +5,7 @@ from layers.SelfAttention_Family import FullAttention, AttentionLayer
 from layers.Embed import PatchEmbedding
 
 class Transpose(nn.Module):
-    def __init__(self, *dims, contiguous=False): 
+    def __init__(self, *dims, contiguous=False):
         super().__init__()
         self.dims, self.contiguous = dims, contiguous
     def forward(self, x):
@@ -42,6 +42,13 @@ class Model(nn.Module):
         self.task_name = configs.task_name
         self.seq_len = configs.seq_len
         self.pred_len = configs.pred_len
+
+        # Allow patch_len to be set from configs
+        if hasattr(configs, 'patch_len') and configs.patch_len is not None:
+            patch_len = configs.patch_len
+        # Ensure patch_len doesn't exceed seq_len
+        patch_len = min(patch_len, configs.seq_len)
+        stride = min(stride, patch_len)
         padding = stride
 
         # patching and embedding
