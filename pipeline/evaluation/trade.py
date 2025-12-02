@@ -55,43 +55,68 @@ def save_report(log_rows: list[dict], output_path: str):
 
 
 def scoring(response: str):
+    # Check if the <answer> tag contains 'up', 'down', or 'hold'
+    # Check the format of the <score> tag
+    # Check if the <pct_change> tag is a floating-point number
+    # Check if the relationship between answer and pct_change is correct
+    # Check if the response contains "factors supporting an increase" and "factors supporting a decrease"
+    
     if "</think>" in response:
         response = response.rsplit("</think>", 1)[-1]
+    
     check_pass = []
+
     answer = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL)
     if answer:
-        answer = answer.group(1)
+        answer = answer.group(1).strip() 
         if answer in ["up", "down", "hold"]:
-            check_pass += [True]
+            check_pass.append(True)
+        else:
+            check_pass.append(False)
+    else:
+        check_pass.append(False) 
+
     score = re.search(r"<score>(.*?)</score>", response, re.DOTALL)
     if score:
-        score = score.group(1)
+        score = score.group(1).strip() 
         try:
             scores = eval(score)
             if len(scores) == 2 and all(isinstance(i, (int, float)) for i in scores):
-                check_pass += [True]
+                check_pass.append(True)
+            else:
+                check_pass.append(False)
         except Exception as e:
             print(f"Error: {e}")
-            pass
+            check_pass.append(False)
+    else:
+        check_pass.append(False)
+
     pct_change = re.search(r"<pct_change>(.*?)</pct_change>", response, re.DOTALL)
     if pct_change:
         try:
-            pct_change = float(pct_change.group(1))
-            check_pass += [True]
+            pct_change = float(pct_change.group(1).strip())
+            check_pass.append(True)  # If pct_change can be converted to a number, mark it as correct
         except Exception as e:
             print(f"Error: {e}")
-            return 0
-        if answer == "up":
-            if pct_change > 0.03:
-                check_pass += [True]
-        elif answer == "down":
-            if pct_change < -0.03:
-                check_pass += [True]
-        elif answer == "hold":
-            if -0.03 < pct_change < 0.03:
-                check_pass += [True]
+            return 0  
+
+        # Check if the relationship between answer and pct_change is correct
+        if answer == "up" and pct_change > 0.03:
+            check_pass.append(True)
+        elif answer == "down" and pct_change < -0.03:
+            check_pass.append(True)
+        elif answer == "hold" and -0.03 < pct_change < 0.03:
+            check_pass.append(True)
+        else:
+            check_pass.append(False)  # If pct_change does not meet the condition, mark it as incorrect
+    else:
+        check_pass.append(False)  # If <pct_change> tag is not found, mark it as incorrect
+
     if "支持上涨的因素" in response and "支持下跌的因素" in response:
-        check_pass += [True]
+        check_pass.append(True) 
+    else:
+        check_pass.append(False) 
+
     return sum(check_pass) / len(check_pass) if check_pass else 0
 
 
